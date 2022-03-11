@@ -5,8 +5,8 @@ const fs = require("fs");
  * Materialize Client
  */
 const materializePool = new Pool({
-  // host: "materialize",
-  host: "localhost",
+  host: "materialized",
+  // host: "localhost",
   port: 6875,
   user: "materialize",
   password: "materialize",

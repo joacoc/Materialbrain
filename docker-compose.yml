@@ -1,0 +1,30 @@
+version: "3"
+services:
+  materialized:
+    image: materialize/materialized:v0.20.0
+    container_name: materialized
+    restart: always
+    ports:
+      - 6875:6875
+  neurons:
+    container_name: neurons
+    build:
+      context: ./neurons
+    depends_on:
+      - materialized
+  occipitallobe:
+    container_name: occipitallobe
+    build:
+      context: ./occipitallobe
+    ports:
+      - 4000:4000
+    depends_on:
+      - materialized
+  frontlobe:
+    container_name: frontlobe
+    build:
+      context: ./frontlobe
+    ports:
+      - 3000:3000
+    depends_on:
+      - occipitallobe

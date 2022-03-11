@@ -7,7 +7,7 @@ const port = 4000;
 app.use(cors());
 
 const pg = new Pool({
-  host: "localhost",
+  host: "materialized",
   port: 6875,
   user: "materialize",
   password: "materialize",
