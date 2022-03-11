@@ -1,0 +1,17 @@
+{
+  "name": "neurons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "download": "node download.js",
+    "load": "node load.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@slack/web-api": "^6.7.0",
+    "pg": "^8.7.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
